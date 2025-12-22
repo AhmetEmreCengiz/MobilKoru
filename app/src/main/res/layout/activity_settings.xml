@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AYARLAR"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GÜVENLİK AYARLARI"
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="15dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="25dp">
+
+            <EditText
+                android:id="@+id/etOldPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:hint="Mevcut Şifre"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/etNewPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:hint="Yeni Şifre Belirle"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+                android:id="@+id/btnChangePin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ŞİFREYİ GÜNCELLE"
+                android:backgroundTint="#FF7043"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALARM YAPILANDIRMASI"
+            android:textColor="#1976D2"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="15dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensör Hassasiyeti"
+                android:textColor="#546E7A"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvSensitivityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Durum: Normal"
+                android:textSize="12sp"
+                android:textColor="#78909C"/>
+
+            <SeekBar
+                android:id="@+id/sbSensitivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="150"
+                android:progress="75"
+                android:layout_marginTop="10dp"
+                android:progressTint="#2196F3"
+                android:thumbTint="#1976D2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sola: AZ HASSAS | Sağa: ÇOK HASSAS"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="#90A4AE"
+                android:layout_marginBottom="20dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ses Seviyesi (Kilitli)"
+                android:textColor="#1565C0"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgVolume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton android:id="@+id/rb25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%25" android:layout_marginEnd="5dp"/>
+                <RadioButton android:id="@+id/rb50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%50" android:layout_marginEnd="5dp"/>
+                <RadioButton android:id="@+id/rb75" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%75" android:layout_marginEnd="5dp"/>
+                <RadioButton android:id="@+id/rb100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%100" android:textStyle="bold" android:textColor="#D32F2F"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSaveSettings"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="AYARLARI KAYDET"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
